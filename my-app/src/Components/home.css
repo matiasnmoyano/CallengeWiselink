@@ -1,0 +1,87 @@
+*{
+    font-family: Poppins;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-logo{
+    color: #1E9DBA;
+    margin-right: 1rem;
+    font-weight:bolder ;
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.nav-section{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.nav-link{
+    font-weight: 400;
+    margin-right: 7rem;
+    text-decoration: none;
+}
+.nav-link:hover{
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: 500ms;
+}
+.nav-link:not(:hover){
+    transition: 500ms;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.home-image{
+    margin-right: 3rem;
+    width: 50rem;
+    height: 35rem;
+}
+.home-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-left: 3rem;
+   
+}
+.home-title{
+    margin-top: -2rem;
+    margin-bottom:0;
+    font-size: 4rem;
+    font-weight: 500;
+    color: #494949;
+}
+.home-subtitle{
+    margin-top: 0rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #8D8D8D;
+}
+
+.btn{
+    font-size: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 20rem;
+    margin-left: 2rem;
+    border-radius: 11px;
+    background-color: white;
+    color: #26C8ED;
+    border: 3px solid #26C8ED
+}
+.btn:hover{
+    color:#494949;
+    background-color: #26C8ED;
+    transform: scale(1.05);
+    box-shadow: 5px 2.5px 2.5px #494949;
+    transition: 500ms;
+}
+.btn:not(:hover){
+    transition: 500ms;
+}
