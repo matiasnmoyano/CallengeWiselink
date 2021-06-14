@@ -62,7 +62,7 @@
     color: #8D8D8D;
 }
 .home-info .btn {
-    align-item: center;
+    align-items: center;
 }
 .btn{
     font-size: 1.3rem;
@@ -85,4 +85,10 @@
 }
 .btn:not(:hover){
     transition: 500ms;
+}
+@media (min-width: 1600px){
+    .container{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }
