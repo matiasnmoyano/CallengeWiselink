@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function Wallets(){
+    
+
     return(
         <div>
             <nav className='nav'>
@@ -11,7 +13,7 @@ export default function Wallets(){
                     <a  href='#'className='nav-link'>Ayuda</a>
                     <a  href='#'className='nav-link'>Contacto</a>
                 </section>
-            </nav> 
+            </nav>   
         </div>
     )
 }

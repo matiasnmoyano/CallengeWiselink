@@ -3,7 +3,6 @@
 }
 .nav{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 .nav-logo{
@@ -15,7 +14,7 @@
     margin-top: 1rem;
 }
 .nav-section{
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: row;
 }
@@ -62,7 +61,9 @@
     font-weight: 400;
     color: #8D8D8D;
 }
-
+.home-info .btn {
+    align-item: center;
+}
 .btn{
     font-size: 1.3rem;
     justify-content: center;

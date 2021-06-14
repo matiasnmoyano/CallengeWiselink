@@ -1,12 +1,26 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useHistory } from 'react-router'
 import './home.css'
+import Axios from 'axios'
 import image from '../images/10107.jpg'
+
 export default function Home () {
     let history= useHistory()
     function handleClick() {
         history.push("/wallets");
       }
+     function getApi(){
+        if(!localStorage.Date){
+            Axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+            .then(data =>{
+                localStorage.Date= data.data
+            })
+        }
+    }
+   
+    useEffect(()=>{
+        getApi()
+    },[])
     return(
         <div className='container'>
             <nav className='nav'>
@@ -14,7 +28,7 @@ export default function Home () {
                 <section className='nav-section'>
                     <a  href='#'className='nav-link'>Inicio</a>
                     <a  href='#'className='nav-link'>¿Quienes somos?</a>
-                    <a  href='#'className='nav-link'>Ayuda</a>
+                    <a  href='wallets'className='nav-link'>Ayuda</a>
                     <a  href='#'className='nav-link'>Contacto</a>
                 </section>
             </nav>
