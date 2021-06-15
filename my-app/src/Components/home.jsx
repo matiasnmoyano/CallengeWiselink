@@ -6,18 +6,20 @@ import image from '../images/10107.jpg'
 
 export default function Home () {
     let history= useHistory()
+    localStorage.wallets=JSON.stringify([])
     function handleClick() {
         history.push("/wallets");
       }
      function getApi(){
-        if(!localStorage.Date){
-            Axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+        if(!localStorage.api){
+            Axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false')
             .then(data =>{
-                localStorage.Date= data.data
+                localStorage.api=JSON.stringify(data.data)
             })
         }
     }
-   
+    let data=JSON.parse(localStorage.getItem('api'))
+   console.log(data)
     useEffect(()=>{
         getApi()
     },[])
